@@ -103,7 +103,7 @@ export class FileService implements IFileService {
 		return this._onAfterOperation.event;
 	}
 
-	private onFileServiceError(msg: any): void {
+	private onFileServiceError(msg: string): void {
 		errors.onUnexpectedError(msg);
 
 		// Detect if we run < .NET Framework 4.5
@@ -178,7 +178,7 @@ export class FileService implements IFileService {
 		this.updateOptions(configuration.files);
 	}
 
-	public updateOptions(options: any): void {
+	public updateOptions(options: object): void {
 		this.raw.updateOptions(options);
 	}
 

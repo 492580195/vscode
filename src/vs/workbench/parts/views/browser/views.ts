@@ -43,7 +43,7 @@ export interface IViewOptions {
 
 export interface IViewConstructorSignature {
 
-	new (options: IViewOptions, ...services: { _serviceBrand: any; }[]): IView;
+	new(options: IViewOptions, ...services: { _serviceBrand: any; }[]): IView;
 
 }
 
@@ -269,7 +269,7 @@ export abstract class CollapsibleView extends AbstractCollapsibleView implements
 
 export interface IViewletViewOptions extends IViewOptions {
 
-	viewletSettings: any;
+	viewletSettings: object;
 
 }
 
@@ -289,7 +289,7 @@ export class ComposedViewsViewlet extends Viewlet {
 	private splitView: SplitView;
 	protected views: IView[];
 	private dimension: Dimension;
-	private viewletSettings: any;
+	private viewletSettings: object;
 
 	private readonly viewsContextKeys: Set<string> = new Set<string>();
 	private readonly viewsStates: Map<string, IViewState>;
